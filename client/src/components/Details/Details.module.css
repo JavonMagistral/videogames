@@ -1,0 +1,17 @@
+.containInfo{
+    
+    background-color: #161b23ee;
+    height: auto;
+    width: auto;
+    
+}
+
+.img{
+    border-radius:20px;
+}
+
+.description{
+    font-weight: bold;
+    color: black;
+}
+

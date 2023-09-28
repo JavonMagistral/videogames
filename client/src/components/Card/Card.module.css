@@ -1,4 +1,44 @@
 .tamañoImg{
     width: 200px;
-    height: 200px;
+    height: 200px; 
+    border-radius: 15px;
+}
+.contain {
+    display: inline-block;
+    margin-top: 10%;
+    background-color:#161b23ee;
+    margin-left: 40px;
+    border-color: black;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    width: fit-content;
+    padding: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.438);
+    text-shadow: 4px 4px 3px rgba(0,0,0,0.33);
+    width: 300px;
+    height: 350px;
+  }
+
+  .contain:hover{
+    background-color:#1b373e;
+    transform: translateY(-20px);
+  }
+  
+  .info {
+   
+    margin: 8px;
+    background-color:#408286a4;
+    border-radius: 10px; 
+
+  }
+
+  .navlink {
+    color: rgb(0, 0, 0); /* Color predeterminado (rojo) */
+    text-decoration: none; /* Quita la subraya predeterminada */
+  }
+  .genres {
+    max-height: 100px; /* Ajusta la altura máxima según tus necesidades */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    color: black; /* Cambia el color del texto a negro */
 }

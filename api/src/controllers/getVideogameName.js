@@ -1,6 +1,7 @@
 const axios = require ("axios");
 const API_URL = "https://api.rawg.io/api/games?search=";
 const {Videogame} = require ("../db");
+const {KEY} = process.env
 
 const gameName = async (req, res) => {
   const {name} = req.query;
@@ -15,7 +16,7 @@ const gameName = async (req, res) => {
   
       try {
         // Construir la URL de la API de Pokémon con el nombre proporcionado
-        const videoGamesAPIUrl = `${API_URL}${lowercaseNameQuery}&key=304c3f1c3f94445eb62c14dadef998c1`;
+        const videoGamesAPIUrl = `${API_URL}${lowercaseNameQuery}&key=${KEY}`;
   
         // Realizar una solicitud a la URL construida
         const response = await axios.get(videoGamesAPIUrl);

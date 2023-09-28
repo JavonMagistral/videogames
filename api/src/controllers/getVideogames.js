@@ -1,16 +1,16 @@
 const axios = require("axios");
 const { Videogame, Genre } = require("../db.js");
-
+const { KEY } = process.env;
 const getVideogames = async (req, res) => {
   try {
     let allVideogames = [];
-    const desiredGameCount = 35; // Número deseado de juegos
+    const desiredGameCount = 16; // Número deseado de juegos
 
     let nextPage = 1;
     let totalPages = 1;
 
     while (nextPage <= totalPages && allVideogames.length < desiredGameCount) {
-      const URL = `https://api.rawg.io/api/games?key=304c3f1c3f94445eb62c14dadef998c1&page=${nextPage}`;
+      const URL = `https://api.rawg.io/api/games?key=${KEY}&page=${nextPage}`;
       const { data } = await axios.get(URL);
 
       const videojuegosLs = data.results;

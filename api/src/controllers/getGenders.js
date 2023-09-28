@@ -1,11 +1,12 @@
 const axios = require('axios');
 const { Genre } = require('../db');
+const { KEY } = process.env;
 
 const getGenre = async (req, res) => {
     try {
         // Verifica si la base de datos está vacía
         const dbGenre = await Genre.findAll();
-        const apiResponse = await axios.get('https://api.rawg.io/api/genres?key=304c3f1c3f94445eb62c14dadef998c1');
+        const apiResponse = await axios.get(`https://api.rawg.io/api/genres?key=${KEY}`);
         const apiGenre = apiResponse.data.results;
 
         if (dbGenre.length === 0) {

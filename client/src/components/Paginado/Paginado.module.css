@@ -1,0 +1,38 @@
+.paginado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .paginadoList {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .paginadoItem {
+    display: inline-block; 
+    margin-right: 0px; /* Espacio entre los números de página */
+  }
+  
+  .paginadoItem:last-child {
+    margin-right: 0; /* Sin margen a la derecha para el último elemento */
+  }
+  
+  .paginadoButton {
+    background-color: #1b373e;
+    color: rgb(0, 0, 0);
+    border:none;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .paginadoButton:hover {
+    background-color: #254a53;
+    transform: translate(0px, -2px);
+  }

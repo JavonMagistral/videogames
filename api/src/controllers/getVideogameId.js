@@ -1,7 +1,7 @@
 const URL = "https://api.rawg.io/api/games/"; 
 const axios = require("axios"); 
 const { Videogame, Genre } = require('../db'); 
-
+const { KEY } = process.env;
 const getVideogamesId = async (req, res) => { // Definición de la función 'pokemonid' para manejar una solicitud HTTP
   try { // Inicio de un bloque 'try' para manejar errores
     const { idVideogame } = req.params; // Obtención del parámetro "idPokemon" de la solicitud
@@ -17,7 +17,7 @@ const getVideogamesId = async (req, res) => { // Definición de la función 'pok
       }
     }
 
-    const { data } = await axios.get(`${URL}${idVideogame}?key=304c3f1c3f94445eb62c14dadef998c1`); // Realización de una solicitud HTTP a la API de Pokémon para obtener detalles
+    const { data } = await axios.get(`${URL}${idVideogame}?key=${KEY}`); // Realización de una solicitud HTTP a la API de Pokémon para obtener detalles
 
     if (!data.name) { // Verificación si la respuesta no contiene el nombre del Pokémon
       throw new Error("No se encontró");

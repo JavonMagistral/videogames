@@ -11,7 +11,7 @@ const postVideogame = async (req, res) => {
 
    
 
-    // Crea el nuevo Pokémon en la base de datos
+    // Crea el nuevo juego en la base de datos
     const newVideogame = await Videogame.create({
         name,
         description,

@@ -1,0 +1,36 @@
+/* Nav.module.css */
+
+.nav {
+    background-color: #1b373e; /* Color de fondo deseado */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrar el contenido */
+  }
+  
+  .navButtons {
+    display: flex;
+    justify-content: space-around; /* Espaciado uniforme entre botones */
+  }
+  
+  /* Estilos para los botones */
+  .navButtons button {
+    background-color: #408286; /* Fondo transparente para los botones */
+    border: none; /* Sin bordes */
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos para los enlaces dentro de los botones */
+  .navButtons a {
+    text-decoration: none; /* Sin subrayado de enlace */
+    color: white; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 10px 20px; /* Espaciado interno de los enlaces */
+    transition: color 0.3s ease; /* Transición de color suave */
+  }
+  
+  /* Cambiar el color del texto al pasar el mouse sobre los enlaces */
+  .navButtons a:hover {
+    color: #000000; /* Nuevo color al pasar el mouse */
+  }
